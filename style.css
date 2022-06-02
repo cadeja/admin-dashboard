@@ -4,9 +4,7 @@ html, body {
     height: 100vh;
 }
 
-* {
-    border: 1px solid red;
-}
+
 
 /* base layer */
 
@@ -15,6 +13,8 @@ html, body {
     grid-template-rows: max(15%, 100px) 1fr;
     grid-template-columns: 25% 1fr;
     height: 100%;
+
+
 }
 
 .sidebar {
@@ -66,12 +66,19 @@ html, body {
 
 /* main-content grid */
 
+:root {
+    --content-padding: 20px;
+    --content-item-padding: 10px;
+}
+
+
 .main-content{
     display: grid;
-    height: 100%;
+    height: calc(100% - var(--content-padding) * 2);
 
     grid-template-columns: 70% 1fr;
     grid-template-rows: 1fr;
+    padding: var(--content-padding);
 }
 
 
@@ -79,10 +86,13 @@ html, body {
     grid-column: 1 / 2;
 
     display: grid;
-    height: 100%;
+    height: calc(100% - var(--content-item-padding) * 2);
 
     grid-template-rows: 8% repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
+
+    gap: 5px;
+    padding: var(--content-item-padding);
 
 }
 
@@ -90,11 +100,13 @@ html, body {
     grid-column: 2 / 3;
     
     display: grid;
-    height: 100%;
+    height: calc(100% - 10px);
 
     grid-template-columns: 1fr;
     grid-template-rows: 8% 1fr 8% 1fr;
 
+    gap: 5px;
+    padding: 5px;
 }
 
 .section-header {
@@ -157,6 +169,8 @@ html, body {
     background-color: #e2e8f0;
 }
 
-.project-item {
-
+.project-item,
+.announcements,
+.trending {
+    background-color: white;
 }
