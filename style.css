@@ -183,7 +183,7 @@ html, body {
 .trending {
     background-color: white;
     border-radius: 10px;
-    filter: drop-shadow(2px 2px 2px lightgray);
+    filter: drop-shadow(3px 3px 4px lightgray);
 }
 
 .project-item {
